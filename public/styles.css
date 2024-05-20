@@ -1,0 +1,147 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.chat-container {
+  width: 100%;
+  max-width: 800px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  display: flex;
+  flex-direction: column;
+  height: 80%;
+}
+
+.chat-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  align-items: center;
+}
+
+.chat-header h2 {
+  margin: 0;
+}
+
+.chat-header button {
+  background-color: #0056b3;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-header button:hover {
+  background-color: #003f7f;
+}
+
+.chat-messages {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: column;
+}
+
+.chat-input {
+  display: flex;
+  padding: 15px;
+  border-top: 1px solid #ddd;
+  background-color: #f4f4f9;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+
+.chat-input button {
+  padding: 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.chat-input button:hover {
+  background-color: #0056b3;
+}
+
+.message {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.message .message-content {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 10px;
+  max-width: 80%;
+  word-break: break-word;
+  line-height: 1.6;
+}
+
+.message.user {
+  justify-content: flex-end;
+  display: flex;
+}
+
+.message.user .message-content {
+  background-color: #d1e7ff;
+  text-align: left;
+  word-wrap: break-word;
+}
+
+.message.api {
+  justify-content: flex-start;
+}
+
+.message.api .message-content {
+  background-color: #f2d7d5;
+}
+
+.message.user .message-content::after {
+  content: " ";
+  clear: both;
+  display: table;
+}
+
+/* Markdown Styling */
+.message-content h1, .message-content h2, .message-content h3, 
+.message-content h4, .message-content h5, .message-content h6 {
+  margin: 10px 0;
+}
+
+.message-content p {
+  margin: 5px 0;
+}
+
+.message-content ul, .message-content ol {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.message-content code {
+  background-color: #f4f4f4;
+  padding: 2px 4px;
+  border-radius: 5px;
+  font-family: Consolas, "courier new";
+}
